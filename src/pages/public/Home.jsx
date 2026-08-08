@@ -36,7 +36,7 @@ export default function Home() {
 
       <main>
         <section className="relative overflow-hidden pb-24 pt-14 md:pt-20">
-          <div className="absolute inset-x-0 top-0 h-[420px] bg-gradient-to-b from-blue-100/45 to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 top-0 h-[420px] bg-gradient-to-b from-brand-tint/70 to-transparent pointer-events-none" />
           <div className="absolute right-0 top-16 h-[320px] w-[320px] rounded-full bg-brand/10 blur-3xl opacity-80" />
           <div className="max-w-[1180px] mx-auto px-6">
             <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center">
@@ -71,8 +71,8 @@ export default function Home() {
               </div>
 
               <div className="relative">
-                <div className="absolute -left-8 top-10 h-28 w-28 rounded-full bg-sky-100/60 blur-3xl" />
-                <div className="absolute -right-6 top-36 h-24 w-24 rounded-full bg-lavender-100/70 blur-3xl" />
+                <div className="absolute -left-8 top-10 h-28 w-28 rounded-full bg-brand-tint/80 blur-3xl" />
+                <div className="absolute -right-6 top-36 h-24 w-24 rounded-full bg-indigo-tint/90 blur-3xl" />
 
                 <div className="floating-card card border-line p-6 mb-6 shadow-xl cursor-default">
                   <div className="flex items-center justify-between gap-2">
@@ -111,15 +111,15 @@ export default function Home() {
                   </div>
                   <div className="mt-4 text-[16px] font-semibold">Network view</div>
                   <div className="mt-4 grid grid-cols-3 gap-3">
-                    <div className="rounded-2xl bg-brand/5 p-3 text-center">
+                    <div className="rounded-2xl bg-brand/10 p-3 text-center">
                       <div className="text-[15px] font-semibold">48</div>
                       <div className="text-[11px] text-muted mt-1">Cities</div>
                     </div>
-                    <div className="rounded-2xl bg-brand/5 p-3 text-center">
+                    <div className="rounded-2xl bg-brand/10 p-3 text-center">
                       <div className="text-[15px] font-semibold">6</div>
                       <div className="text-[11px] text-muted mt-1">Signals</div>
                     </div>
-                    <div className="rounded-2xl bg-brand/5 p-3 text-center">
+                    <div className="rounded-2xl bg-brand/10 p-3 text-center">
                       <div className="text-[15px] font-semibold">94%</div>
                       <div className="text-[11px] text-muted mt-1">Data fidelity</div>
                     </div>

@@ -44,7 +44,7 @@ export default function AlertDetail() {
             <div key={label} className="flex items-center gap-3.5">
               <span className="w-[170px] flex-shrink-0 text-muted text-[13px]">{label}</span>
               <div className="flex-1 h-[7px] bg-slate-100 rounded-full overflow-hidden">
-                <div className="h-full rounded-full bg-gradient-to-r from-brand to-indigo" style={{ width: `${val}%` }} />
+                <div className="h-full rounded-full bg-gradient-to-r from-brand to-brand-dark" style={{ width: `${val}%` }} />
               </div>
             </div>
           ))}

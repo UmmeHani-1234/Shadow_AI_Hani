@@ -26,7 +26,7 @@ export default function RegisterHospital() {
 
   return (
     <div className="min-h-screen flex items-center justify-center px-6 py-10">
-      <div className="card w-full max-w-[520px] p-8">
+      <div className="card w-full max-w-[520px] p-8 scale-x-[1.1] scale-y-[0.95] origin-top">
         <Link to="/" className="flex items-center gap-1.5 text-muted text-[12.5px] w-fit">
           <ArrowLeft size={14} /> Back to site
         </Link>
