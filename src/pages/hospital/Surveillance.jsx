@@ -1,4 +1,4 @@
-import { Activity, ShieldCheck, Upload, ClipboardList, AlertTriangle } from "lucide-react";
+import { Activity, ShieldCheck, Upload, ClipboardList, AlertTriangle, TrendingUp } from "lucide-react";
 import { useMemo } from "react";
 import { useAuth } from "../../context/AuthContext.jsx";
 import { evidenceFactors } from "../../data/mockData.js";
@@ -18,9 +18,9 @@ export default function HospitalSurveillance() {
       <div className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.32em] text-slate-500">Hospital surveillance</p>
-            <h1 className="text-3xl font-semibold text-slate-900 mt-2">Daily reporting & signal validation</h1>
-            <p className="mt-3 text-sm text-slate-500 max-w-2xl">
+            <p className="text-[11px] uppercase tracking-[0.24em] text-slate-500">Hospital surveillance</p>
+            <h1 className="text-[22px] font-semibold text-slate-900 mt-2">Daily reporting & signal validation</h1>
+            <p className="mt-3 text-[13.5px] text-slate-500 max-w-2xl leading-6">
               Monitor internal data quality, trending evidence, and the signals that feed ShadowDoctor's early warnings.
             </p>
           </div>
@@ -40,16 +40,19 @@ export default function HospitalSurveillance() {
             </div>
             <ClipboardList className="text-blue-600" />
           </div>
-          <div className="space-y-4">
-            {surveillanceSignals.map((signal) => (
-              <div key={signal.label} className="rounded-3xl border border-slate-200 bg-slate-50 p-4">
-                <div className="flex items-center justify-between gap-3">
-                  <div>
-                    <p className="text-sm font-semibold text-slate-900">{signal.label}</p>
-                    <p className="text-sm text-slate-500 mt-1">Score: {signal.score}</p>
+          <div className="overflow-hidden rounded-[20px] border border-slate-200 bg-white">
+            {surveillanceSignals.map((signal, index) => (
+              <div key={signal.label} className="data-row">
+                <div className="data-row-details">
+                  <span className="icon-chip-sm bg-danger-tint text-danger border-transparent">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-trending-up"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+                  </span>
+                  <div className="data-row-copy">
+                    <p className="data-row-label">{signal.label}</p>
+                    <p className="data-row-meta">Score: {signal.score}</p>
                   </div>
-                  <RiskBadge level={signal.status === "High" ? "High" : signal.status === "Elevated" ? "Medium" : "Low"} />
                 </div>
+                <RiskBadge level={signal.status === "High" ? "High" : signal.status === "Elevated" ? "Medium" : "Low"} />
               </div>
             ))}
           </div>
@@ -63,18 +66,24 @@ export default function HospitalSurveillance() {
             </div>
             <ShieldCheck className="text-slate-600" />
           </div>
-          <div className="space-y-3">
-            <div className="rounded-3xl bg-slate-50 p-4">
-              <div className="text-sm text-slate-500">Latest upload</div>
-              <div className="mt-2 text-lg font-semibold text-slate-900">{currentHospital?.lastActivity}</div>
+          <div className="overflow-hidden rounded-[20px] border border-slate-200 bg-white">
+            <div className="data-row">
+              <div>
+                <p className="data-row-label">Latest upload</p>
+                <p className="data-row-meta">{currentHospital?.lastActivity}</p>
+              </div>
             </div>
-            <div className="rounded-3xl bg-slate-50 p-4">
-              <div className="text-sm text-slate-500">Data validation</div>
-              <div className="mt-2 text-lg font-semibold text-slate-900">Good</div>
+            <div className="data-row">
+              <div>
+                <p className="data-row-label">Data validation</p>
+                <p className="data-row-meta">Good</p>
+              </div>
             </div>
-            <div className="rounded-3xl bg-slate-50 p-4">
-              <div className="text-sm text-slate-500">Recommended action</div>
-              <div className="mt-2 text-lg font-semibold text-slate-900">Confirm recent case counts and lab results</div>
+            <div className="data-row border-b-0">
+              <div>
+                <p className="data-row-label">Recommended action</p>
+                <p className="data-row-meta">Confirm recent case counts and lab results</p>
+              </div>
             </div>
           </div>
           <button className="btn-primary w-full mt-6">

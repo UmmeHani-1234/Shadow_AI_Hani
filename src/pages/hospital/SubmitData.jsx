@@ -72,9 +72,9 @@ export default function SubmitData() {
 
 function Row({ label, value, first }) {
   return (
-    <div className={"flex justify-between py-2.5 text-[13px] " + (first ? "" : "border-t border-line")}>
-      <span>{label}</span>
-      <span>{value}</span>
+    <div className={"flex justify-between py-3 text-[13.5px] " + (first ? "" : "border-t border-line")}>
+      <span className="text-[13.5px] text-slate-900">{label}</span>
+      <span className="text-[13px] text-slate-700">{value}</span>
     </div>
   );
 }

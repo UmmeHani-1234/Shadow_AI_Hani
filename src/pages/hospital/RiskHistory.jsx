@@ -71,9 +71,9 @@ export default function HospitalRiskHistory() {
             <BarChart3 className="text-slate-600" />
           </div>
           <ul className="space-y-3 text-sm text-slate-600">
-            <li className="rounded-3xl bg-slate-50 p-4">Data submission completeness improved, boosting model confidence for the latest forecast.</li>
-            <li className="rounded-3xl bg-slate-50 p-4">Regional case reports showed a sustained upward trend in the local health district.</li>
-            <li className="rounded-3xl bg-slate-50 p-4">Environmental factors such as rainfall and humidity contributed additional risk weight.</li>
+            <li className="rounded-3xl bg-white p-4 border border-slate-200 text-[13.5px] text-slate-600">Data submission completeness improved, boosting model confidence for the latest forecast.</li>
+            <li className="rounded-3xl bg-white p-4 border border-slate-200 text-[13.5px] text-slate-600">Regional case reports showed a sustained upward trend in the local health district.</li>
+            <li className="rounded-3xl bg-white p-4 border border-slate-200 text-[13.5px] text-slate-600">Environmental factors such as rainfall and humidity contributed additional risk weight.</li>
           </ul>
         </div>
 

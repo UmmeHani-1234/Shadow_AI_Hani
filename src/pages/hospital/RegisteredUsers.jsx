@@ -23,9 +23,9 @@ export default function HospitalRegisteredUsers() {
               Manage who receives alerts and surveillance notifications for your hospital.
             </p>
           </div>
-          <div className="rounded-3xl bg-slate-50 px-5 py-4 text-slate-700 shadow-sm">
-            <div className="text-xs uppercase tracking-[0.32em] text-slate-500">Total users</div>
-            <div className="mt-2 text-xl font-semibold text-slate-900">{hospitalUsers.length}</div>
+          <div className="rounded-3xl bg-white px-5 py-4 text-slate-700 shadow-sm border border-slate-200">
+            <div className="text-[11px] uppercase tracking-[0.24em] text-slate-500">Total users</div>
+            <div className="mt-2 text-[18px] font-semibold text-slate-900">{hospitalUsers.length}</div>
           </div>
         </div>
       </div>

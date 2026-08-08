@@ -28,28 +28,28 @@ export default function HospitalOverview() {
       <div className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.32em] text-slate-500">{currentHospital?.name}</p>
-            <h1 className="text-3xl font-semibold text-slate-900 mt-2">{currentHospital?.region} hospital dashboard</h1>
-            <p className="mt-3 text-sm text-slate-500 max-w-2xl">
+            <p className="text-[11px] uppercase tracking-[0.24em] text-slate-500">{currentHospital?.name}</p>
+            <h1 className="text-[20px] font-semibold text-slate-900 mt-2">{currentHospital?.region} hospital dashboard</h1>
+            <p className="mt-3 text-[13.5px] text-slate-500 max-w-2xl leading-6">
               Fast, explainable early-warning alerts for your hospital, regional comparison, and submission workflow.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4 text-center">
-              <div className="text-xs uppercase tracking-[0.24em] text-slate-500">Active alerts</div>
-              <div className="text-3xl font-bold text-slate-900 mt-3">{currentAlerts.length}</div>
+            <div className="rounded-3xl border border-slate-200 bg-white p-4 text-center">
+              <div className="text-[12.5px] uppercase tracking-[0.24em] text-slate-500">Active alerts</div>
+              <div className="text-[26px] font-semibold text-slate-900 mt-3">{currentAlerts.length}</div>
             </div>
-            <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4 text-center">
-              <div className="text-xs uppercase tracking-[0.24em] text-slate-500">High risk</div>
-              <div className="text-3xl font-bold text-slate-900 mt-3">{currentAlerts.filter((a) => a.risk === "High").length}</div>
+            <div className="rounded-3xl border border-slate-200 bg-white p-4 text-center">
+              <div className="text-[12.5px] uppercase tracking-[0.24em] text-slate-500">High risk</div>
+              <div className="text-[26px] font-semibold text-slate-900 mt-3">{currentAlerts.filter((a) => a.risk === "High").length}</div>
             </div>
-            <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4 text-center">
-              <div className="text-xs uppercase tracking-[0.24em] text-slate-500">Submitted today</div>
-              <div className="text-3xl font-bold text-slate-900 mt-3">{currentHospital?.lastActivity?.includes("min") ? "Yes" : "No"}</div>
+            <div className="rounded-3xl border border-slate-200 bg-white p-4 text-center">
+              <div className="text-[12.5px] uppercase tracking-[0.24em] text-slate-500">Submitted today</div>
+              <div className="text-[26px] font-semibold text-slate-900 mt-3">{currentHospital?.lastActivity?.includes("min") ? "Yes" : "No"}</div>
             </div>
-            <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4 text-center">
-              <div className="text-xs uppercase tracking-[0.24em] text-slate-500">Registered users</div>
-              <div className="text-3xl font-bold text-slate-900 mt-3">{hospitalUsers.length}</div>
+            <div className="rounded-3xl border border-slate-200 bg-white p-4 text-center">
+              <div className="text-[12.5px] uppercase tracking-[0.24em] text-slate-500">Registered users</div>
+              <div className="text-[26px] font-semibold text-slate-900 mt-3">{hospitalUsers.length}</div>
             </div>
           </div>
         </div>

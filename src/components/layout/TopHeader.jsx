@@ -5,8 +5,8 @@ export default function TopHeader({ title, avatarLabel = "P" }) {
     <header className="sticky top-0 z-20 bg-white/80 backdrop-blur border-b border-slate-200">
       <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-5 sm:px-8">
         <div>
-          <p className="text-xs uppercase tracking-[0.32em] text-slate-500">Dashboard</p>
-          <h1 className="font-semibold text-xl text-slate-900">{title}</h1>
+          <p className="text-[11px] uppercase tracking-[0.24em] text-slate-500">Dashboard</p>
+          <h1 className="font-semibold text-[19px] text-slate-900">{title}</h1>
         </div>
 
         <div className="flex items-center gap-3">

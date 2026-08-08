@@ -9,6 +9,13 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.bg-dashboard-backdrop {
+  background-color: #f5f8ff;
+  background-image: radial-gradient(circle at top left, rgba(124, 58, 237, 0.18), transparent 18%),
+                    radial-gradient(circle at 82% 18%, rgba(14, 165, 233, 0.12), transparent 16%),
+                    radial-gradient(circle at 22% 88%, rgba(99, 102, 241, 0.08), transparent 14%);
+}
+
 @layer components {
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-2.5 text-sm font-medium transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
@@ -67,9 +74,35 @@ body {
     @apply w-8 h-8 rounded-[10px] bg-brand-tint text-brand flex items-center justify-center flex-shrink-0;
   }
   .icon-chip-lg { @apply w-11 h-11 rounded-[13px]; }
+  .icon-chip-sm { @apply inline-flex h-9 w-9 items-center justify-center rounded-2xl border border-slate-200/80 text-[13px] font-semibold; }
 
   .eyebrow {
-    @apply text-[11.5px] font-semibold tracking-wide uppercase text-muted;
+    @apply text-[11px] font-semibold tracking-[0.24em] uppercase text-muted;
+  }
+
+  .data-row {
+    @apply flex items-center justify-between gap-3 border-t border-slate-200/70 py-3;
+  }
+  .data-row:first-child {
+    @apply border-t-0;
+  }
+  .data-row-details {
+    @apply flex items-center gap-3 min-w-0;
+  }
+  .data-row-copy {
+    @apply min-w-0;
+  }
+  .data-row-label {
+    @apply text-[13.5px] font-medium text-slate-900 truncate;
+  }
+  .data-row-meta {
+    @apply text-[12px] text-slate-500 mt-0.5 truncate;
+  }
+  .icon-chip-sm {
+    @apply inline-flex h-9 w-9 items-center justify-center rounded-2xl border border-slate-200/80 text-[13px] font-semibold;
+  }
+  .badge-sm {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-semibold;
   }
 
   .field-label {
@@ -80,7 +113,7 @@ body {
   }
 
   .sidebar-item {
-    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-sm text-slate-700 hover:bg-slate-50 transition-all duration-200 w-full text-left;
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-[13.5px] text-slate-700 hover:bg-slate-50 transition-all duration-200 w-full text-left;
   }
 
   .sidebar-item-active {
