@@ -22,7 +22,12 @@ async function request(path, options = {}) {
     ...(options.headers || {}),
   };
 
-  const res = await fetch(`${BASE_URL}${path}`, { ...options, headers });
+  let res;
+  try {
+    res = await fetch(`${BASE_URL}${path}`, { ...options, headers });
+  } catch (err) {
+    throw new Error('Unable to connect to the server. Please check your network or backend URL.');
+  }
 
   let data;
   try { data = await res.json(); } catch { data = {}; }
