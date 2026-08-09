@@ -1,13 +1,16 @@
 # Pulse — Health Network Frontend
 
-A React (Vite + Tailwind) frontend with two role-scoped dashboards:
+This repository contains the frontend app for Pulse Health, a healthcare network dashboard built with React, Vite, and Tailwind.
 
-- **Hospital Dashboard** (`/hospital`) — for a single hospital that has
-  registered on the platform. Every screen is scoped to *that hospital's own
-  data only* (its own alerts, its own submissions, its own profile).
-- **Admin Dashboard** (`/admin`) — the network operator's view, aggregating
-  data across **every** registered hospital (organizations table, network-wide
-  alerts, regional risk comparison, system health).
+The app supports two main roles:
+
+- **Hospital Dashboard** (`/hospital`) — hospital users can view their own alerts, submit surveillance data, see risk history, and manage notifications.
+- **Admin Dashboard** (`/admin`) — network admins can oversee all registered hospitals, review alerts, compare regions, manage organizations, and monitor system health.
+
+## Project links
+
+- GitHub: https://github.com/UmmeHani-1234/Shadow_AI_Hani
+- Live demo: https://pulse-health-frontend.vercel.app
 
 ## Getting started
 
