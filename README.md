@@ -16,6 +16,10 @@ npm install
 npm run dev       # http://localhost:5173
 ```
 
+## Repository
+
+- GitHub: https://github.com/UmmeHani-1234/Shadow_AI_Hani
+
 ```bash
 npm run build      # production build -> dist/
 npm run preview    # preview the production build
